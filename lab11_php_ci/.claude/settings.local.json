@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -l app/Controllers/Artikel.php)",
+      "Bash(php -l .env)",
+      "Bash(/c/xampp/php/php.exe *)"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Pemrograman Web 2</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        
+        <nav class="navbar">
+            <router-link to="/" class="nav-link">Beranda</router-link>
+            <router-link to="/artikel" class="nav-link">Artikel</router-link>
+            <router-link to="/about" class="nav-link">About</router-link>
+            
+            <router-link to="/login" v-if="!isLoggedIn" class="nav-link">Login</router-link>
+            
+            <a href="#" v-else @click="logout" class="nav-link">Logout</a>
+        </nav>
+
+        <router-view></router-view>
+        
+    </div>
+
+   <script src="assets/js/components/Home.js"></script>
+    <script src="assets/js/components/About.js"></script>
+    <script src="assets/js/components/Artikel.js"></script>
+    <script src="assets/js/components/Login.js"></script> 
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
